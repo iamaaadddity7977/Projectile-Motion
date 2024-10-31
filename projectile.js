@@ -1,9 +1,9 @@
-const g = 9.81; // Acceleration due to gravity (m/s²)
+const g = 9.81; // Acceleration due to gravity (m/s²) Contant 
 
 class ProjectileMotion {
   constructor(mass, angle, force) {
     this.mass = mass;
-    this.angle = angle * (Math.PI / 180); // Convert to radians
+    this.angle = angle * (Math.PI / 180); // Convert to radians IMP
     this.force = force;
     this.initialVelocity = this.force / this.mass;
   }
