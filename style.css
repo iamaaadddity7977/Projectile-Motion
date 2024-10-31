@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #2563eb;
+  --primary-color: #6666FF;
   --background-color: #f8fafc;
   --text-color: #1e293b;
   --border-color: #e2e8f0;
@@ -85,7 +85,8 @@ button {
 }
 
 button:hover {
-  background-color: #1d4ed8;
+  /* background-color: #1d4ed8; */
+  background-color: #9494FF;
 }
 
 #reset {

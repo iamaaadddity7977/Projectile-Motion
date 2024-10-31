@@ -28,6 +28,38 @@
           <button id="reset">Reset</button>
         </div>
 
+        <!-- <div class="results">
+          <div class="result-group">
+            <h3>Initial Velocity</h3>
+            <p>v₀ = <span id="initial-velocity">0</span> m/s</p>
+          </div>
+          <div class="result-group">
+            <h3>Maximum Height</h3>
+            <p>h_max = <span id="max-height">0</span> m</p>
+          </div>
+          <div class="result-group">
+            <h3>Time of Flight</h3>
+            <p>t = <span id="time-of-flight">0</span> s</p>
+          </div>
+          <div class="result-group">
+            <h3>Range</h3>
+            <p>R = <span id="range">0</span> m</p>
+          </div>
+        </div> -->
+
+        <div class="legend">
+          <div class="legend-item">
+            <span class="legend-color" style="background: #6666FF"></span>
+            <span>Projectile</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-color" style="background: #00BFFF"></span>
+            <span>Velocity Vectors</span>
+          </div>
+        </div>
+
+        <canvas id="trajectory"></canvas>
+        
         <div class="results">
           <div class="result-group">
             <h3>Initial Velocity</h3>
@@ -46,19 +78,6 @@
             <p>R = <span id="range">0</span> m</p>
           </div>
         </div>
-
-        <div class="legend">
-          <div class="legend-item">
-            <span class="legend-color" style="background: #2563eb"></span>
-            <span>Projectile</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-color" style="background: #22c55e"></span>
-            <span>Velocity Vectors</span>
-          </div>
-        </div>
-
-        <canvas id="trajectory"></canvas>
       </div>
     </div>
     <script src="./projectile.js"></script>

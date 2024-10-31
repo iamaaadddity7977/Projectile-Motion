@@ -1,5 +1,13 @@
 const g = 9.81; // Acceleration due to gravity (m/s²) Contant 
 
+// const angle = document.querySelectorAll('.angle');
+// if(angle >= 90){
+//   console.log("Range is 0 to 90")
+// }else(
+  
+// )
+
+
 class ProjectileMotion {
   constructor(mass, angle, force) {
     this.mass = mass;

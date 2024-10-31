@@ -15,6 +15,7 @@ class ProjectileVisualizer {
     this.canvas.width = this.canvas.offsetWidth;
     this.canvas.height = this.canvas.offsetHeight;
   }
+  
 
   calculateScale(points) {
     const maxX = Math.max(...points.map(p => p.x));
@@ -70,7 +71,8 @@ class ProjectileVisualizer {
   drawProjectile(x, y) {
     const radius = 8;
     this.ctx.beginPath();
-    this.ctx.fillStyle = '#2563eb';
+    this.ctx.fillStyle = '#6666FF';
+    // this.ctx.fillStyle = '#2563eb';
     this.ctx.arc(
       x * this.scale + this.padding,
       this.canvas.height - (y * this.scale + this.padding),
@@ -88,7 +90,8 @@ class ProjectileVisualizer {
 
     // Draw velocity vectors
     this.ctx.beginPath();
-    this.ctx.strokeStyle = '#22c55e';
+    this.ctx.strokeStyle = '#00BFFF';
+    // this.ctx.strokeStyle = '#22c55e';
     this.ctx.lineWidth = 2;
     
     // Horizontal velocity
