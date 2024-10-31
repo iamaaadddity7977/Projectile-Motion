@@ -2,7 +2,7 @@
 // Initialize visualizer
 const visualizer = new ProjectileVisualizer('trajectory');
 
-// Default values
+// Fixed values
 const defaultValues = {
   mass: 1,
   angle: 45,
