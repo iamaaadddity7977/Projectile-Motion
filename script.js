@@ -1,4 +1,3 @@
-
 // Initialize visualizer
 const visualizer = new ProjectileVisualizer('trajectory');
 
