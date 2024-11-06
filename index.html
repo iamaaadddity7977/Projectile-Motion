@@ -5,67 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projectile Motion</title>
     <link rel="shortcut icon" href="./catapult (1).png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="container">
+    <div id="app">
       <h1>Projectile Motion</h1>
-      
-      <div class="simulator">
-        <div class="inputs">
-          <div class="input-group">
-            <label for="mass">Mass (kg):</label>
-            <input type="number" id="mass" value="1" min="0.1" step="0.1">
-          </div>
-          <div class="input-group">
-            <label for="angle">Angle (degrees):</label>
-            <input type="number" id="angle" value="45" min="0" max="90">
-          </div>
-          <div class="input-group">
-            <label for="force">Initial Force (N):</label>
-            <input type="number" id="force" value="100" min="1">
-          </div>
-          <button id="calculate">Launch Projectile</button>
-          <button id="reset">Reset</button>
+      <div class="inputs">
+        <div class="input-group">
+          <label for="mass">Mass (kg)</label>
+          <input type="number" id="mass" style="background-color: azure; color: black;" value="1" min="0.1" step="0.1">
         </div>
-
-
-        <div class="legend">
-          <div class="legend-item">
-            <span class="legend-color" style="background: #6666FF"></span>
-            <span>Projectile</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-color" style="background: #00BFFF"></span>
-            <span>Velocity Vectors</span>
-          </div>
+        <div class="input-group">
+          <label for="velocity">Initial Velocity (m/s)</label>
+          <input type="number" id="velocity" style="background-color: azure; color: black;"  value="20" min="1" step="1">
         </div>
-
-        <canvas id="trajectory"></canvas>
-
-        <div class="results">
-          <div class="result-group">
-            <h3>Initial Velocity</h3>
-            <p>v₀ = <span id="initial-velocity">0</span> m/s</p>
-          </div>
-          <div class="result-group">
-            <h3>Maximum Height</h3>
-            <p>h_max = <span id="max-height">0</span> m</p>
-          </div>
-          <div class="result-group">
-            <h3>Time of Flight</h3>
-            <p>t = <span id="time-of-flight">0</span> s</p>
-          </div>
-          <div class="result-group">
-            <h3>Range</h3>
-            <p>R = <span id="range">0</span> m</p>
-          </div>
+        <div class="input-group">
+          <label for="angle">Angle (degrees)</label>
+          <input type="number" id="angle" style="background-color: azure; color: black;" value="45" min="0" max="90" step="1">
+        </div>
+        <div class="input-group">
+          <label for="height">Initial Height (m)</label>
+          <input type="number" id="height" style="background-color: azure; color: black;" value="0" min="0" step="1">
+        </div>
+        <div class="buttons">
+          <button id="launch" class="primary">Launch</button>
+          <button id="reset" style="background-color: #6666FF; color: rgb(248, 239, 239);">Reset</button>
+        </div>
+      </div>
+      <div class="simulation">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="results">
+        <div class="result-item">
+          <h3>Time of Flight</h3>
+          <p id="time">0.00 s</p>
+        </div>
+        <div class="result-item">
+          <h3>Maximum Height</h3>
+          <p id="max-height">0.00 m</p>
+        </div>
+        <div class="result-item">
+          <h3>Range</h3>
+          <p id="range">0.00 m</p>
+        </div>
+        <div class="result-item">
+          <h3>Final Velocity</h3>
+          <p id="final-velocity">0.00 m/s</p>
         </div>
       </div>
     </div>
-    <script src="check.js"></script>
-    <script src="./projectile.js"></script>
-    <script src="./visulize.js"></script>
-    <script src="./script.js"></script>
+    <script type="module" src="./script.js"></script>
   </body>
 </html>
