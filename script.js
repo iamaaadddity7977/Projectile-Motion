@@ -25,7 +25,7 @@ class Projectile {
   update(dt) {
     this.time += dt;
     this.x = this.vx * this.time;
-    this.y = this.h0 + this.vy * this.time - 0.5 * g * this.time * this.time;
+    this.y = this.h0 + this.vy * this.time - 0.35 * g * this.time * this.time;
     this.maxHeight = Math.max(this.maxHeight, this.y);
     this.range = this.x;
   }
