@@ -1,6 +1,6 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-const g = 9.81; // Acceleration due to gravity (m/s²)
+const g = 9.81; 
  
 let animationId = null;
 let trajectory = [];
@@ -11,7 +11,7 @@ class Projectile {
   constructor(mass, velocity, angle, height) {
     this.mass = mass;
     this.v0 = velocity;
-    this.angle = angle * Math.PI / 180; // Convert to radians
+    this.angle = angle * Math.PI / 180; 
     this.h0 = height;
     this.x = 0;
     this.y = height;
@@ -95,7 +95,7 @@ function animate() {
   const dt = 0.016; // 60 FPS
   projectile.update(dt);
   
-  // Scale factors for drawing
+  // Scale 
   const scaleX = canvas.width / (projectile.range + 10);
   const scaleY = canvas.height / (projectile.maxHeight + 10);
   const scale = Math.min(scaleX, scaleY);
